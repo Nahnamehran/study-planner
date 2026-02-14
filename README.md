@@ -52,12 +52,14 @@ Handles user interaction, form state, and directly interfaces with the Groq AI A
 **Backend (Express + Mongo):** *Implemented in server.js*. Provides endpoints for user registration and server-side plan generation/storage (currently optional as the frontend handles generation locally). 
 ### Workflow
 1. **User Entry:** User enters basic details (Name, Email, Role).
-2.  **Plan Configuration:** User inputs Syllabus, Exam Date, Wake/Sleep times, and Daily Study Hours.
+2. **Plan Configuration:** User inputs Syllabus, Exam Date, Wake/Sleep times, and Daily Study Hours.
 3. **AI Processing:** The application sends this data to the AI model via Groq SDK.
 4. **Schedule Generation:** AI returns a structured JSON plan.
 5. **Dashboard:** User views the interactive timeline, marks tasks as done, and receives notifications. --- 
 ## API Documentation *(Note: These endpoints are available in the server.js backend implementation)* 
-**Base URL:** http://localhost:5000 ### Endpoints #### 1. Health Check - **GET** / -
+**Base URL:** http://localhost:5000 
+### Endpoints 
+#### 1. Health Check - **GET** / -
 **Response:** "Study Planner API running" 
 #### 2. Register User - **POST** /api/register - **Body:**
 json
