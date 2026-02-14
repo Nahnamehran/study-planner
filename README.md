@@ -1,20 +1,171 @@
-<<<<<<< HEAD
-# React + Vite
+# Study Planner 🎯
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Team Name:** Tech Crew  
+**Team Members:** Nahna Mehran, Mamo Collage  
+**Hosted Project Link:** [https://study-planner-eight-iota.vercel.app/](https://study-planner-eight-iota.vercel.app/)
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+An AI-powered study planner that takes a student’s syllabus, exam date, and available study time to create a personalized day-by-day study schedule. It intelligently distributes topics across the days before the exam, suggests realistic study hours, includes periodic review and breaks, and helps students stay organized and on track with their preparation.
 
-## React Compiler
+## The Problem & Solution
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**The Problem:** Students often struggle with effectively planning their study time and managing academic tasks, which leads to stress, missed deadlines, and poor learning outcomes.
 
-## Expanding the ESLint configuration
+**The Solution:** Instead of guessing how and when to study, the planner gives students a clear roadmap for every day — a schedule tailored to their pace, ensuring all topics are covered before exams, helping them stay organized, motivated, and in control of their preparation.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# study-planner
->>>>>>> 3a479691c288b09878311e1306062f164a2d063f
+---
+
+## Technical Details
+
+### Technologies Used
+
+-   **Frontend:** React (v19), Vite (v7), CSS (Glassmorphism UI)
+-   **AI Integration:** Groq SDK (`groq-sdk`), Cloud-based LLM (Moonshot AI / Kimi)
+-   **Backend:** Node.js, Express.js
+-   **Database:** MongoDB, Mongoose
+-   **Tools:** ESLint, Git
+
+### Features
+
+1.  **AI-Powered Schedule Generation:** Generates a detailed, day-by-day study plan covering all syllabus topics, revision sessions, and breaks based on user's exam date and available hours.
+2.  **Smart Form Input:** Intuitive multi-step form to collect user details, syllabus, and lifestyle preferences (wake/sleep times).
+3.  **Interactive Timeline:** A visual timeline of daily activities with checkboxes to track progress.
+4.  **Study Reminders:** Browser notifications to remind students when a study session is over or a task should be completed.
+5.  **Motivational Tips:** AI-generated daily wisdom to keep students exploring and motivated.
+
+---
+
+## Implementation
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/YourUsername/studyplanner.git
+    cd studyplanner
+    ```
+
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Setup:**
+    Create a `.env` file in the root directory and add your Groq API key:
+    ```env
+    VITE_GROQ_API_KEY=your_groq_api_key_here
+    ```
+
+### Run
+
+1.  **Start the Development Server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173`.
+
+2.  **Build for Production:**
+    ```bash
+    npm run build
+    npm run preview
+    ```
+
+---
+
+## Project Documentation
+
+### Screenshots
+
+*(Insert Screenshots here)*
+
+### Diagrams
+
+*(Insert Diagrams here)*
+
+### System Architecture
+
+The current implementation follows a **Client-Side AI** architecture for immediate responsiveness, with a foundation laid for full-stack expansion.
+
+-   **Frontend (React + Vite):** Handles user interaction, form state, and directly interfaces with the Groq AI API for generating schedules. It also manages local notifications and state persistence.
+-   **AI Layer (Groq):** Processes the syllabus and constraints to return a structured JSON study plan.
+-   **Backend (Express + Mongo):** *Implemented in `server.js`*. Provides endpoints for user registration and server-side plan generation/storage (currently optional as the frontend handles generation locally).
+
+### Workflow
+
+1.  **User Entry:** User enters basic details (Name, Email, Role).
+2.  **Plan Configuration:** User inputs Syllabus, Exam Date, Wake/Sleep times, and Daily Study Hours.
+3.  **AI Processing:** The application sends this data to the AI model via Groq SDK.
+4.  **Schedule Generation:** AI returns a structured JSON plan.
+5.  **Dashboard:** User views the interactive timeline, marks tasks as done, and receives notifications.
+
+---
+
+## API Documentation
+
+*(Note: These endpoints are available in the `server.js` backend implementation)*
+
+**Base URL:** `http://localhost:5000`
+
+### Endpoints
+
+#### 1. Health Check
+-   **GET** `/`
+-   **Response:** "Study Planner API running"
+
+#### 2. Register User
+-   **POST** `/api/register`
+-   **Body:**
+    ```json
+    {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "student"
+    }
+    ```
+-   **Response:** User object with ID.
+
+#### 3. Generate Plan (Server-Side)
+-   **POST** `/api/plan`
+-   **Body:**
+    ```json
+    {
+      "userId": "UserObjectId",
+      "syllabus": "Topics...",
+      "examDate": "2024-12-31",
+      "availableTime": "5 hours"
+    }
+    ```
+-   **Response:**
+    ```json
+    {
+      "message": "Plan generated!",
+      "plan": { ... }
+    }
+    ```
+
+---
+
+## AI Tools Used
+
+-   **Tool:** Cursor / Groq SDK
+-   **Purpose:** Accelerated development, boilerplate generation, and core logic for the AI study planning engine.
+-   **Prompts Used:**
+    1.  "Create a detailed, day-by-day study schedule for a student... Return ONLY a raw JSON object."
+    2.  "Include manageable study sessions each day with time suggested for each topic."
+    3.  "Add short breaks and periodic review/revision sessions."
+
+---
+
+## Team Contributions
+
+-   **Nahna Mehran:** Frontend Interface, React Logic
+-   **Mamo Collage:** AI Integration, Prompt Engineering
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+**Made with ❤️ at TinkerHub**
