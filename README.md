@@ -77,7 +77,9 @@ An AI-powered study planner that takes a student’s syllabus, exam date, and av
 
 ### Screenshots
 
-*(Insert Screenshots here)*
+![](/public/screenshot/Screenshot 2026-02-14 085425.png)
+![](/public/screenshot/Screenshot 2026-02-14 085402.png)
+![](/public/screenshot/Screenshot 2026-02-14 085318.png)
 
 ### Diagrams
 
