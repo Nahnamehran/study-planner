@@ -43,9 +43,9 @@ bash
     --- 
 ## Project Documentation 
 ### Screenshots
-![](/public/screenshot/Screenshot 2026-02-14 085425.png) 
-![](/public/screenshot/Screenshot 2026-02-14 085402.png) 
-![](/public/screenshot/Screenshot 2026-02-14 085318.png) 
+1.https://github.com/Nahnamehran/study-planner/blob/a35626786f3c44873288c1846f4fe2334a7b6f7d/Screenshot%202026-02-14%20085318.png
+2.https://github.com/Nahnamehran/study-planner/blob/a35626786f3c44873288c1846f4fe2334a7b6f7d/Screenshot%202026-02-14%20085402.png
+3.https://github.com/Nahnamehran/study-planner/blob/a35626786f3c44873288c1846f4fe2334a7b6f7d/Screenshot%202026-02-14%20085425.png
 ### Diagrams *(Insert Diagrams here)* 
 ### System Architecture The current implementation follows a **Client-Side AI** architecture for immediate responsiveness, with a foundation laid for full-stack expansion. - **Frontend (React + Vite):**
 Handles user interaction, form state, and directly interfaces with the Groq AI API for generating schedules. It also manages local notifications and state persistence. - **AI Layer (Groq):** Processes the syllabus and constraints to return a structured JSON study plan. - 
