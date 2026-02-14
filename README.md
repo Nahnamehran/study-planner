@@ -81,8 +81,19 @@ json
       "plan": { ... }
     }
 ---
-## AI Tools Used - **Tool:** Cursor / Groq SDK - **Purpose:** Accelerated development, boilerplate generation, and core logic for the AI study planning engine. - **Prompts Used:** 1. "Create a detailed, day-by-day study schedule for a student... Return ONLY a raw JSON object." 2. "Include manageable study sessions each day with time suggested for each topic." 3. "Add short breaks and periodic review/revision sessions."
+## AI Tools Used - 
+**Tool:**Cursor / Groq SDK - 
+**Purpose:**
+Accelerated development, boilerplate generation, and core logic for the AI study planning engine. - 
+**Prompts Used:**
+1. "Create a detailed, day-by-day study schedule for a student... Return ONLY a raw JSON object."
+2. "Include manageable study sessions each day with time suggested for each topic."
+3. "Add short breaks and periodic review/revision sessions."
 --- 
-## Team Contributions - **Nahna Mehran:** Frontend Interface, React Logic - **Mamo Collage:** AI Integration, Prompt Engineering 
+## Team Contributions - 
+**Nahna Mehran:** 
+Frontend Interface, React Logic - 
+**Mamo Collage:** 
+AI Integration, Prompt Engineering 
 ---
 ## License This project is licensed under the MIT License. **Made with ❤️ at TinkerHub**
